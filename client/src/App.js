@@ -1,11 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setUploadFile } from './redux/uploadFile/uploadFile.actions';
+
+
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
 
   const handleAttachFile = e => {
     console.log('files upload', e.target.files)
+    props.setUploadFile(e.target.files)
+    e.target.value = ''
   }
 
   return (
@@ -18,4 +24,8 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setUploadFile: files => dispatch(setUploadFile(files))
+})
+
+export default connect(null, mapDispatchToProps)(App);
