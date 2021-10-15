@@ -9,7 +9,7 @@ const UploadItem = props => {
         <div className={Styles.wrapperItem}>
             <div className={Styles.leftSide}>
                 <div className={Styles.progressBar}>
-                    <div style={{ width: `${progress}%` }}></div>
+                    <div style={{ width: `${progress}%` }} />
                 </div>
                 <label>{file.name}</label>
             </div>
