@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import UplodFile from './uploadFile/uploadFile.reducer'
+import UploadFile from './uploadFile/uploadFile.reducer'
 
 const rootReducer = combineReducers({
-    UplodFile,
+    UploadFile,
 })
 
 export default rootReducer

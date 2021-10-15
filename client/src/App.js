@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import { setUploadFile } from './redux/uploadFile/uploadFile.actions';
 
 
 import logo from './logo.svg';
 import './App.css';
+
+import UploadProgress from './components/UploadProgress/UploadProgress';
 
 function App(props) {
 
@@ -20,6 +23,7 @@ function App(props) {
         <img src={logo} className="App-logo" alt="logo" />
         <input type="file" multiple onChange={handleAttachFile} />
       </header>
+      <UploadProgress />
     </div>
   );
 }
